@@ -19,9 +19,9 @@ public class NameValidation implements ConstraintValidator<PersonName, String> {
      * </p>
      * <p>A name is considered valid when the following constraints are satisfied:</p>
      * <li>1.Initial of the name should be in the uppercase (A-Z) english letters.</li>
-     * <li>2.Uppercase (A-Z) and lowercase (a-z) english letters.</li>
-     * <li>3.Name can contain white space characters.</li>
-     * <li>4.Name can contain special character like(_).</li>
+     * <li>2.Uppercase (A-Z) and lowercase (a-z) english letters</li>
+     * <li>3.Name can contain white space characters</li>
+     * <li>4.Name can contain special character like(_)</li>
      * <li>5.Name should contain three to forty characters.</li>
      * <p>Example: S Thanga_lakshmi</p>
      *

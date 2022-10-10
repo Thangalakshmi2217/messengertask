@@ -9,7 +9,7 @@ import com.messenger.orm.TableName;
 
 /**
  * <p>
- *    Controls all the requests from the API.
+ *     Handles all the requests from the API and manages to send back the response to the user.
  * </p>
  *
  * @author Venkatesh N
@@ -26,7 +26,7 @@ public class AuthenticationController {
      *
      * @param tableName       represents the name of a table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the {@link Collection} of user details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
@@ -37,12 +37,12 @@ public class AuthenticationController {
 
     /**
      * <p>
-     *     Collects all the user details.
+     *     Gets all the user details.
      * </p>
      *
      * @param tableName  represents the name of a table
      * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of all user details
+     * @return the {@link Collection} of user details
      */
     public Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName,
                                                          final List<String> columnList) {
@@ -56,7 +56,7 @@ public class AuthenticationController {
      *
      * @param tableName     represents the name of a table
      * @param objectDetails represents the user details
-     * @return the inserted user details
+     * @return the message user details inserted
      */
     public String addNewUser(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return AUTHENTICATION_SERVICE.addNewUser(tableName, objectDetails);
@@ -70,7 +70,7 @@ public class AuthenticationController {
      * @param tableName       represents the name of a table
      * @param objectDetails   represents the user details
      * @param conditionColumn obtaining a value from the column by stating the condition
-     * @return the password updated in the specific column
+     * @return the message password updated
      */
     public String updatePassword(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                  final Map<String, Object> conditionColumn) {
@@ -79,13 +79,13 @@ public class AuthenticationController {
 
     /**
      * <p>
-     *     Checks whether the Username has been updated.
+     *     Checks whether the username has been updated.
      * </p>
      *
      * @param tableName       represents the name of a table
      * @param objectDetails   represents the user details
-     * @param conditionColumn getting a value from a column by specifying a condition
-     * @return the username updated in the specific column
+     * @param conditionColumn gets the value by giving a certain condition
+     * @return the message username updated
      */
     public String updateUserName(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                  final Map<String, Object> conditionColumn) {
@@ -99,7 +99,7 @@ public class AuthenticationController {
      *
      * @param tableName     represents the name of a table
      * @param objectDetails represents the user details
-     * @return the particular deleted details
+     * @return the message user details deleted
      */
     public String deleteDetailsById(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return AUTHENTICATION_SERVICE.deleteDetailsById(tableName, objectDetails);

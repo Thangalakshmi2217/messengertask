@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Controls all the requests from the API.
+ *     Handles all the requests from the API and manages to send back the response to the user.
  * </p>
  *
  * @author Venkatesh N
@@ -23,13 +23,13 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Checks whether all the contacts can be obtained.
+     *     Gets the user contacts.
      * </p>
      *
      * @param tableName           represents name of the table
      * @param columnList          represents the {@link List} of columns
-     * @param conditionColumn     getting a value from a column by specifying a condition
-     * @return the {@link Collection} of user contacts
+     * @param conditionColumn     gets the value by giving a certain condition
+     * @return the {@link Collection} of contact details
      */
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
                                                           final List<String> columnList,
@@ -44,7 +44,7 @@ public class ConversationController {
      *
      * @param tableName     represents name of the table
      * @param objectDetails represents the contact details
-     * @return the inserted contact details
+     * @return the message new contact is inserted
      */
     public String addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return CONTACT_SERVICE.addNewContact(tableName, objectDetails);
@@ -57,8 +57,8 @@ public class ConversationController {
      *
      * @param tableName       represent database table's name
      * @param objectDetails   represents the contact details
-     * @param conditionColumn getting a value from a column by specifying a condition
-     * @return the MobileNumber updated in the specific column
+     * @param conditionColumn gets the value by giving a certain condition
+     * @return the message mobile number updated
      */
     public String updateMobileNumber(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                      final Map<String, Object> conditionColumn) {
@@ -72,7 +72,7 @@ public class ConversationController {
      *
      * @param tableName     represent name of the table
      * @param objectDetails represents the contact details
-     * @return the deleted contacts
+     * @return the message user contact is deleted
      */
     public String deleteUserContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return CONTACT_SERVICE.deleteUserContact(tableName, objectDetails);
@@ -85,7 +85,7 @@ public class ConversationController {
      *
      * @param tableName     represents the name of the table
      * @param objectDetails represents the message details
-     * @return the inserted message
+     * @return the message, a new message is inserted
      */
     public String addMessage(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return MESSAGE_SERVICE.addMessage(tableName, objectDetails);
@@ -93,13 +93,13 @@ public class ConversationController {
 
     /**
      * <p>
-     *    Checks whether Specific message details can be retrieved.
+     *     Gets the message.
      * </p>
      *
      * @param tableName       represent name of the table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
-     * @return the {@link Collection} of messages
+     * @param conditionColumn gets the value by giving a certain condition
+     * @return the {@link Collection} of message
      */
     public Collection<Map<String, Object>> getMessage(final Enum<TableName> tableName,
                                                       final List<String> columnList,

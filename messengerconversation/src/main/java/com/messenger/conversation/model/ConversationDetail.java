@@ -18,7 +18,7 @@ import java.sql.Timestamp;
 
 /**
  * <p>
- *     A model class which represents the {@link ConversationDetail} and include annotations that are predetermined.
+ *     A model class which represents the {@link ConversationDetail}.
  * </p>
  *
  * @author Venkatesh N

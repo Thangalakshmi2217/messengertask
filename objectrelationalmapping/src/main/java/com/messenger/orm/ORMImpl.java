@@ -78,7 +78,7 @@ public class ORMImpl implements ORM {
      *
      * @param tableName       represents the name of the table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the {@link Collection} of details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
@@ -156,7 +156,7 @@ public class ORMImpl implements ORM {
      *
      * @param tableName       represents the name of the table
      * @param objectDetails   represents the object
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return true when the user details is updated
      */
     public Boolean update(final Enum<TableName> tableName, final Map<String, Object> objectDetails,

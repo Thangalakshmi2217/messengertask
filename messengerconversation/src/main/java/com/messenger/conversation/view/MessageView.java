@@ -25,7 +25,7 @@ import org.json.simple.JSONObject;
 
 /**
  * <p>
- *     Provides the API services for the messages to be retrieved and sent.
+ *      Sends the message through API and gets the message history.
  * </p>
  *
  * @author Venkatesh N

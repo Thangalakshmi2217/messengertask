@@ -19,11 +19,11 @@ public class PasswordValidation implements ConstraintValidator<Password, String>
      *     Validating the {@link Password}.
      * </p>
      * <p>A password is considered valid when the following constraints are satisfied:</p>
-     * <lI>At least one upper case english letter, [A-Z]</li>
-     * <li>At least one lower case english letter, [a-z]</li>
-     * <li>At least one digit, [0-9]</li>
+     * <lI>At least one upper case english letter [A-Z]</li>
+     * <li>At least one lower case english letter [a-z]</li>
+     * <li>At least one digit [0-9]</li>
      * <li>At least one special character [#?!@$%^&*-]</li>
-     * <li>Minimum 6 characters and can have 20 characters</li>
+     * <li>Minimum 6 characters and can have 20 characters.</li>
      *
      * @param password {@link Password} is validated
      * @param context  context in which the constraint is evaluated

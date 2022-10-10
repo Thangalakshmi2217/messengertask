@@ -13,7 +13,7 @@ public class CustomException extends RuntimeException {
 
     /**
      * <p>
-     *    Constructs a {@link CustomException}
+     *    Constructs a {@link CustomException}.
      * </p>
      *
      * @param exception a message occurs when an exception is thrown

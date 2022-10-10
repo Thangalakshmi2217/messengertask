@@ -18,12 +18,12 @@ public interface ContactService {
 
     /**
      * <p>
-     *     Checks whether specific UserContact can be retrieved.
+     *     Gets the user contact.
      * </p>
      *
      * @param tableName           represents name of the table
      * @param columnList          represents the {@link List} of columns
-     * @param conditionColumn     getting a value from a column by specifying a condition
+     * @param conditionColumn     gets the value by giving a certain condition
      * @return the {@link Collection} of user contact details
      */
     Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
@@ -32,23 +32,23 @@ public interface ContactService {
 
     /**
      * <p>
-     *     Checks whether UserContact has been inserted.
+     *     Checks whether user contact has been inserted.
      * </p>
      *
      * @param tableName     represents name of the table
      * @param objectDetails represents the contact details
-     * @return the new contact inserted status
+     * @return the contact insertion status
      */
     String addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails);
 
     /**
      * <p>
-     *     Checks whether the MobileNumber has been updated.
+     *     Checks whether the mobile number has been updated.
      * </p>
      *
      * @param tableName       represents name of the table
      * @param objectDetails   represents contact details
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the mobile number updated status
      */
     String updateMobileNumber(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -56,7 +56,7 @@ public interface ContactService {
 
     /**
      * <p>
-     *     Checks whether UserContact details are removed.
+     *     Checks whether user contact details are removed.
      *
      * @param tableName     represents name of the table
      * @param objectDetails represents the contact details

@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *    Implemented the provided {@link ContactService}
+ *     Implements the {@link ContactService}.
  * </p>
  *
  * @author Venkatesh N
@@ -25,7 +25,7 @@ public class ContactServiceImpl implements ContactService {
      *
      * @param tableName       represents name of the table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the {@link Collection} of user contact details
      */
     @Override
@@ -40,7 +40,7 @@ public class ContactServiceImpl implements ContactService {
      *
      * @param tableName     represents name of the table
      * @param objectDetails represents the contact details
-     * @return the new contact inserted status
+     * @return the contact insertion status
      */
     @Override
     public String addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
@@ -52,7 +52,7 @@ public class ContactServiceImpl implements ContactService {
      *
      * @param tableName       represents name of the table
      * @param objectDetails   represents the contact details
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the mobile number updated status
      */
     @Override

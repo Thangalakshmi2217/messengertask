@@ -27,7 +27,7 @@ import javax.ws.rs.core.MediaType;
 
 /**
  * <p>
- *     Provides the API services for retrieving, updating, and deleting contacts.
+ *      Gets the contact information through API and executes the CRUD operation.
  * </p>
  *
  * @author Venkatesh N
@@ -40,7 +40,7 @@ public class ContactView {
 
     /**
      * <p>
-     *     Gets the contact information and the information to be displayed in the page is limited.
+     *     Gets the contact details and the information to be displayed in the page is limited.
      * </p>
      *
      * @param id     refers the user's id

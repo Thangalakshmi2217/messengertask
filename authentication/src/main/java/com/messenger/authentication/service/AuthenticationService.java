@@ -18,12 +18,12 @@ public interface AuthenticationService {
 
     /**
      * <p>
-     *     Checks whether the particular user details can be obtained.
+     *     Gets the particular user details.
      * </p>
      *
      * @param tableName       represents the name of the table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the {@link Collection} of user details
      */
     Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
@@ -32,12 +32,12 @@ public interface AuthenticationService {
 
     /**
      * <p>
-     *     Checks whether all the user details can be retrieved.
+     *     Gets all the user details.
      * </p>
      *
      * @param tableName  represents the name of the table
      * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of all user details
+     * @return the {@link Collection} of user details
      */
     Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName, final List<String> columnList);
 
@@ -59,7 +59,7 @@ public interface AuthenticationService {
      *
      * @param tableName       represents the name of the table
      * @param objectDetails   represents user details
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the username updated status
      */
     String updateUserName(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -72,7 +72,7 @@ public interface AuthenticationService {
      *
      * @param tableName       represents the name of the table
      * @param objectDetails   represents user details
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the password updated status
      */
     String updatePassword(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -84,7 +84,7 @@ public interface AuthenticationService {
      * </p>
      *
      * @param tableName       represents the name of the table
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the deletion status
      */
     String deleteDetailsById(final Enum<TableName> tableName, final Map<String, Object> conditionColumn);

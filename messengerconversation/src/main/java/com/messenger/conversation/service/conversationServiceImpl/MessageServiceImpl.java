@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *    Implemented the provided {@link MessageService}.
+ *    Implements the {@link MessageService}.
  * </p>
  *
  * @author Venkatesh N
@@ -36,7 +36,7 @@ public class MessageServiceImpl implements MessageService {
      *
      * @param tableName       represents name of the table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the {@link Collection} of message details
      */
     public Collection<Map<String, Object>> getMessage(final Enum<TableName> tableName, final List<String> columnList,

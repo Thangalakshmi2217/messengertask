@@ -32,7 +32,7 @@ public interface ORM {
      *
      * @param tableName       represents the name of the table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the {@link Collection} of details
      */
     Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
@@ -41,7 +41,7 @@ public interface ORM {
 
     /**
      * <p>
-     *     Collects the list of all the details.
+     *     Gets all the details.
      * </p>
      *
      * @param tableName  represents the name of the table
@@ -57,7 +57,7 @@ public interface ORM {
      *
      * @param tableName       represents the name of the table
      * @param objectValues    represents the column names and its value
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return true when the user details is updated
      */
     Boolean update(final Enum<TableName> tableName, final Map<String, Object> objectValues,

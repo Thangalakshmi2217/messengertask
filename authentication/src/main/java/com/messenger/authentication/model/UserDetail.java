@@ -13,7 +13,7 @@ import jakarta.validation.constraints.Size;
 
 /**
  * <p>
- *     A model class which represents the {@link UserDetail} and include annotations that are predetermined.
+ *     A model class which represents the {@link UserDetail}.
  * </p>
  *
  * @author Venkatesh N

@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database and retrieving, adding, updating, and deleting user details.
+ *     Establishes the {@link Connection} to the database and executes the CRUD operation.
  * </p>
  *
  * @author Venkatesh N
@@ -22,12 +22,12 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Specific user details can be retrieved.
+     *     Gets the particular user details.
      * </p>
      *
      * @param tableName       represents the name of the table
      * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the {@link Collection} of user details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
@@ -38,12 +38,12 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Retrieving all the user details.
+     *     Gets all the user details.
      * </p>
      *
      * @param tableName  represents the name of the table
      * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of all user details
+     * @return the {@link Collection} of user details
      */
     public Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName,
                                                          final List<String> columnList) {
@@ -70,7 +70,7 @@ public class AuthenticationDAO {
      *
      * @param tableName       represents the name of the table
      * @param objectDetails   represents user details
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return true when the user password is updated
      */
     public Boolean updatePassword(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -99,7 +99,7 @@ public class AuthenticationDAO {
      * </p>
      *
      * @param tableName       represents the name of the table
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return true when the user details is removed
      */
     public Boolean deleteDetailsById(final Enum<TableName> tableName, final Map<String, Object> conditionColumn) {

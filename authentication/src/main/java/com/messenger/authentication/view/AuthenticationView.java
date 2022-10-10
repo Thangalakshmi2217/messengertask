@@ -30,7 +30,7 @@ import java.util.HashMap;
 
 /**
  * <p>
- *      Provides the API services, for retrieving, updating, and deleting the user details.
+ *      Gets the user information through API and executes the CRUD operation.
  * </p>
  *
  * @author Venkatesh N
@@ -43,7 +43,7 @@ public class AuthenticationView {
 
     /**
      * <p>
-     *     Obtains the particular user details.
+     *     Gets the particular user details.
      * </p>
      *
      * @param id represents the {@link UserDetail}

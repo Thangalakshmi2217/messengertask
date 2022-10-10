@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database and sending and retrieving the messages.
+ *     Establishes the {@link Connection} to the database and executes the CRUD operation.
  * </p>
  *
  * @author Venkatesh N
@@ -35,7 +35,7 @@ public class MessageDAO {
 
     /**
      * <p>
-     *     Specific message can be retrieved.
+     *     Get the message.
      * </p>
      *
      * @param tableName       represents name of the table

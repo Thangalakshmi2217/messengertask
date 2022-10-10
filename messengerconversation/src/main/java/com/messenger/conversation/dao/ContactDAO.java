@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database and retrieving, adding, updating, and deleting contacts.
+ *     Establishes the {@link Connection} to the database and executes the CRUD operation.
  * </p>
  *
  * @author Venkatesh N
@@ -27,7 +27,7 @@ public class ContactDAO {
      *
      * @param tableName        represents name of the table
      * @param columnList       represents the {@link List} of columns
-     * @param conditionColumn  getting a value from a column by specifying a condition
+     * @param conditionColumn  gets the value by giving a certain condition
      * @return the {@link Collection} of user contacts
      */
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,

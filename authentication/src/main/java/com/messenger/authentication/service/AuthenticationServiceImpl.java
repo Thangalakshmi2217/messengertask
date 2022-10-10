@@ -9,7 +9,7 @@ import com.messenger.orm.TableName;
 
 /**
  * <p>
- *     Implemented the {@link AuthenticationService} provided.
+ *     Implements the {@link AuthenticationService}.
  * </p>
  *
  * @author Venkatesh N
@@ -24,7 +24,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      *
      * @param tableName        represents the name of the table
      * @param columnList       represents the {@link List} of columns
-     * @param conditionColumn  getting a value from a column by specifying a condition
+     * @param conditionColumn  gets the value by giving a certain condition
      * @return the {@link Collection} of user details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
@@ -38,7 +38,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      *
      * @param tableName  represents the name of the table
      * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of all user details
+     * @return the {@link Collection} of user details
      */
     @Override
     public Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName,
@@ -51,7 +51,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      *
      * @param tableName     represents the name of the table
      * @param objectDetails represents user details
-     * @return the user information insertion status
+     * @return the user information inserted status
      */
     @Override
     public String addNewUser(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
@@ -63,8 +63,8 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      *
      * @param tableName       represents the name of the table
      * @param objectDetails   represents user details
-     * @param conditionColumn getting a value from a column by specifying a condition
-     * @return the userName updated status
+     * @param conditionColumn gets the value by giving a certain condition
+     * @return the username updated status
      */
     @Override
     public String updateUserName(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -78,7 +78,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      *
      * @param tableName       represents the name of the table
      * @param objectDetails   represents user details
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the password updated status
      */
     public String updatePassword(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -91,7 +91,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      * {@inheritDoc}
      *
      * @param tableName       represents the name of the table
-     * @param conditionColumn getting a value from a column by specifying a condition
+     * @param conditionColumn gets the value by giving a certain condition
      * @return the deletion status
      */
     @Override
