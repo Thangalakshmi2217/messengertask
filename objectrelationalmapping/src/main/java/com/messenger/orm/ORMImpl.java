@@ -29,10 +29,10 @@ public class ORMImpl implements ORM {
 
     /**
      * <p>
-     *    Returns {@link ORMImpl} instance.
+     *    Gets the ORM instance.
      * </p>
      *
-     * @return the ORM instance
+     * @return {@link ORMImpl}
      */
     public static ORMImpl getInstance() {
 
@@ -45,9 +45,9 @@ public class ORMImpl implements ORM {
     /**
      * {@inheritDoc}
      *
-     * @param tableName    represents the name of table
-     * @param objectValues represents the column names and it's values
-     * @return true when the user details is inserted
+     * @param tableName    represents the table name
+     * @param objectValues represents the column names and it's value
+     * @return true when detail is generated
      */
     public Boolean insert(final Enum<TableName> tableName, final Map<String, Object> objectValues) {
         final StringJoiner column = new StringJoiner(",");
@@ -76,10 +76,10 @@ public class ORMImpl implements ORM {
     /**
      * {@inheritDoc}
      *
-     * @param tableName       represents the name of the table
-     * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the {@link Collection} of details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the particular detail
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                                     final List<String> columnList,
@@ -104,9 +104,9 @@ public class ORMImpl implements ORM {
     /**
      * {@inheritDoc}
      *
-     * @param tableName  represents the name of the table
-     * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of all the details
+     * @param tableName  represents the table name
+     * @param columnList represents the name of table's column
+     * @return the {@link Collection} which contains all the details
      */
     public Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName,
                                                          final List<String> columnList) {
@@ -123,11 +123,11 @@ public class ORMImpl implements ORM {
 
     /**
      * <p>
-     *    Connects to the database, retrieves the user details.
+     *     Retrieves the details.
      * </p>
      *
-     * @param selectQuery using the select query, retrieves the user details in the resultSet
-     * @return the {@link Collection} of details
+     * @param selectQuery  selects the data from a database.
+     * @return the {@link Collection} which contains the details
      */
     private Collection<Map<String, Object>> retrieveDetails(final String selectQuery) {
         final List<Map<String, Object>> result = new ArrayList<>();
@@ -154,10 +154,10 @@ public class ORMImpl implements ORM {
     /**
      * {@inheritDoc}
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents the object
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return true when the user details is updated
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return true when detail is updated
      */
     public Boolean update(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                           final Map<String, Object> conditionColumn) {
@@ -192,9 +192,9 @@ public class ORMImpl implements ORM {
     /**
      * {@inheritDoc}
      *
-     * @param tableName     represents the name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the object
-     * @return true when the user details is removed
+     * @return true when detail is deleted
      */
     public Boolean delete(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         final StringJoiner columnNames = new StringJoiner(" , ");

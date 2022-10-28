@@ -2,7 +2,7 @@ package com.messenger.exception;
 
 /**
  * <p>
- *     Exception occurs, when the specific user not found in the database.
+ *     Exception occurs, when specific user not found in the database.
  * </p>
  *
  * @author Venkatesh N
@@ -13,10 +13,10 @@ public class UserNotFoundException extends CustomException {
 
     /**
      * <p>
-     *    Constructs an {@link UserNotFoundException}, when the user not found in the database.
+     *    Constructs an {@link UserNotFoundException}, when user not found in the database.
      * </p>
      *
-     * @param exception occurs when the user not found in the database
+     * @param exception occurs when user not found in the database
      */
     public UserNotFoundException(final String exception) {
         super(exception);

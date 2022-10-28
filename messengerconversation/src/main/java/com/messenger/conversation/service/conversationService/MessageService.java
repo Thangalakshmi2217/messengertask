@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     An interface which provides {@link MessageService}.
+ *     Provides {@link MessageService}.
  * </p>
  *
  * @author Venkatesh N
@@ -18,24 +18,24 @@ public interface MessageService {
 
     /**
      * <p>
-     *    Checks whether the New Message has been inserted.
+     *    Creates a message.
      * </p>
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the message details
-     * @return the user message inserted status
+     * @return the generated status
      */
     String addMessage(final Enum<TableName> tableName, final Map<String, Object> objectDetails);
 
     /**
      * <p>
-     *     Gets the message.
+     *     Fetches the message.
      * </p>
      *
-     * @param tableName       represents name of the table
-     * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the {@link Collection} of message details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the {@link Collection} which contains the message
      */
     Collection<Map<String, Object>> getMessage(final Enum<TableName> tableName, final List<String> columnList,
                                                final Map<String, Object> conditionColumn);

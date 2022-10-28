@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     An interface which provides {@link ContactService}.
+ *     Provides {@link ContactService}.
  * </p>
  *
  * @author Venkatesh N
@@ -18,13 +18,13 @@ public interface ContactService {
 
     /**
      * <p>
-     *     Gets the user contact.
+     *     Retrieves the user contact.
      * </p>
      *
-     * @param tableName           represents name of the table
-     * @param columnList          represents the {@link List} of columns
-     * @param conditionColumn     gets the value by giving a certain condition
-     * @return the {@link Collection} of user contact details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition
+     * @return the particular user contact
      */
     Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
                                                    final List<String> columnList,
@@ -32,35 +32,35 @@ public interface ContactService {
 
     /**
      * <p>
-     *     Checks whether user contact has been inserted.
+     *     Creates new contact.
      * </p>
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return the contact insertion status
+     * @return the generated status
      */
     String addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails);
 
     /**
      * <p>
-     *     Checks whether the mobile number has been updated.
+     *     Updates the mobile number.
      * </p>
      *
-     * @param tableName       represents name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents contact details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the mobile number updated status
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the updated status
      */
     String updateMobileNumber(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                               final Map<String, Object> conditionColumn);
 
     /**
      * <p>
-     *     Checks whether user contact details are removed.
+     *     Deletes the user contact.
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return the contact deletion status
+     * @return the deleted status
      */
     String deleteUserContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails);
 }

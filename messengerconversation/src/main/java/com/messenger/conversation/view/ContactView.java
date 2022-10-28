@@ -27,7 +27,7 @@ import javax.ws.rs.core.MediaType;
 
 /**
  * <p>
- *      Gets the contact information through API and executes the CRUD operation.
+ *      Gets the contact information through {@code API}.
  * </p>
  *
  * @author Venkatesh N
@@ -40,13 +40,13 @@ public class ContactView {
 
     /**
      * <p>
-     *     Gets the contact details and the information to be displayed in the page is limited.
+     *     Gets the contact and limits the content of contact details.
      * </p>
      *
      * @param id     refers the user's id
-     * @param start  beginning of user contact information
-     * @param limit  option allows you to limit the number of rows to be displayed in a page
-     * @return the result, which will be displayed as {@link JSONObject}.
+     * @param start  refers the start value
+     * @param limit  allows you to limit the number of rows to be displayed
+     * @return {@link JSONObject} which contains the contact
      */
     @Path("/userContactDetails/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -108,11 +108,11 @@ public class ContactView {
 
     /**
      * <p>
-     *     Inserts a new contact.
+     *     Creates a new contact.
      * </p>
      *
      * @param conversationDetail represents the {@link ConversationDetail}
-     * @return the result, which will be displayed as {@link JSONObject}.
+     * @return {@link JSONObject} which contains the generated status
      */
     @Path("/addContact")
     @Produces(MediaType.APPLICATION_JSON)
@@ -141,7 +141,7 @@ public class ContactView {
      * </p>
      *
      * @param conversationDetail represents the {@link ConversationDetail}
-     * @return the result, which will be displayed as {@link JSONObject}.
+     * @return the {@link JSONObject} which contains the updated status
      */
     @Path("/changeMobileNumber")
     @Produces(MediaType.APPLICATION_JSON)
@@ -167,11 +167,11 @@ public class ContactView {
 
     /**
      * <p>
-     *     Removes a specific contact.
+     *     Deletes a specific contact using id.
      * </p>
      *
      * @param id refers to the user's id
-     * @return the result, which will be displayed as {@link JSONObject}.
+     * @return the {@link JSONObject} which contains the deleted status
      */
     @Path("/deleteParticularContact/{id}")
     @Produces(MediaType.APPLICATION_JSON)

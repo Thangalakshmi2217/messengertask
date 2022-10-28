@@ -2,7 +2,7 @@ package com.messenger.validation;
 
 /**
  * <p>
- *    An interface which provides authentication group for validation.
+ *     Provides the authentication group for validation.
  * </p>
  *
  * @author Venkatesh N

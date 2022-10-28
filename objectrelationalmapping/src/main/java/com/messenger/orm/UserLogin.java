@@ -2,7 +2,7 @@ package com.messenger.orm;
 
 /**
  * <p>
- *     An {@link Enum} that contains the column names of the {@link UserLogin}table.
+ *     An {@link Enum} which contains column names of {@link UserLogin} table.
  * </p>
  */
 public enum UserLogin {

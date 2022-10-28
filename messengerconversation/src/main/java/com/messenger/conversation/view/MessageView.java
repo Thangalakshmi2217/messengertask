@@ -25,7 +25,7 @@ import org.json.simple.JSONObject;
 
 /**
  * <p>
- *      Sends the message through API and gets the message history.
+ *      Sends the message through {@code API} and gets the message history.
  * </p>
  *
  * @author Venkatesh N
@@ -37,11 +37,11 @@ public class MessageView extends ConversationController {
 
     /**
      * <p>
-     *     Inserts a new user message.
+     *     Creates a new message.
      * </p>
      *
      * @param conversationDetail represents the {@link ConversationDetail}
-     * @return the result, which will be displayed as {@link JSONObject}.
+     * @return the {@link JSONObject} which contains message status
      */
     @Path("/sendMessage")
     @Produces("application/json")
@@ -71,11 +71,11 @@ public class MessageView extends ConversationController {
 
     /**
      * <p>
-     *     Gets the message history of the particular user.
+     *     Gets the message history from the database.
      * </p>
      *
      * @param id refers the user's id
-     * @return the result, which will be displayed as {@link JSONObject}.
+     * @return the {@link JSONObject} which contains the message history
      */
     @Path("/messageHistory/{id}")
     @Produces("application/json")

@@ -22,10 +22,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName        represents the name of the table
-     * @param columnList       represents the {@link List} of columns
-     * @param conditionColumn  gets the value by giving a certain condition
-     * @return the {@link Collection} of user details
+     * @param tableName        represents the table name
+     * @param columnList       represents the name of table's column
+     * @param conditionColumn  retrieves the value from the field based on the specific condition 
+     * @return the particular details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                                     final List<String> columnList,
@@ -36,9 +36,9 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName  represents the name of the table
-     * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of user details
+     * @param tableName  represents the table name
+     * @param columnList represents the name of table's column
+     * @return the {@link Collection} of details
      */
     @Override
     public Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName,
@@ -49,9 +49,9 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName     represents the name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents user details
-     * @return the user information inserted status
+     * @return the generated status
      */
     @Override
     public String addNewUser(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
@@ -61,10 +61,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents user details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the username updated status
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the updated status
      */
     @Override
     public String updateUserName(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -76,10 +76,10 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents user details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the password updated status
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the updated status
      */
     public String updatePassword(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                  final Map<String, Object> conditionColumn) {
@@ -90,9 +90,9 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName       represents the name of the table
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the deletion status
+     * @param tableName       represents the table name
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the deleted status
      */
     @Override
     public String deleteDetailsById(final Enum<TableName> tableName, final Map<String, Object> conditionColumn) {

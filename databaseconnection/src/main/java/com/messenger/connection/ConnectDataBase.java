@@ -23,10 +23,10 @@ public class ConnectDataBase {
 
     /**
      * <p>
-     *     Returns {@link ConnectDataBase} instance.
+     *     Gets the instance of connection.
      * </p>
      *
-     * @return the connection database instance
+     * @return {@link ConnectDataBase}
      */
     public static ConnectDataBase getInstance() {
 
@@ -43,7 +43,7 @@ public class ConnectDataBase {
      *     and password provided and returns the connection.
      * </p>
      *
-     * @return the {@link Connection} to the database.
+     * @return the {@link Connection}.
      * @exception ConnectionNotFoundException will be thrown, when it is not connected to the database
      */
     public Connection getConnection() {

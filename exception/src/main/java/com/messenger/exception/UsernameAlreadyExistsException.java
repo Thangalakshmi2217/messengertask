@@ -2,7 +2,7 @@ package com.messenger.exception;
 
 /**
  * <p>
- *     Exception occurs, when the user details already existed in the database.
+ *     Exception occurs, when user details already existed in the database.
  * </p>
  *
  * @author Venkatesh N
@@ -13,10 +13,10 @@ public class UsernameAlreadyExistsException extends CustomException {
 
     /**
      * <p>
-     *    Constructs an {@link UsernameAlreadyExistsException} when the user details already existed in the database.
+     *    Constructs an {@link UsernameAlreadyExistsException} when user details already existed in the database.
      * </p>
      *
-     * @param exception occurs when the user details already existed in the database
+     * @param exception occurs when user details already existed in the database
      */
     public UsernameAlreadyExistsException(final String exception) {
         super(exception);

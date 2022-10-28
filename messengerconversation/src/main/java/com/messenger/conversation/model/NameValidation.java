@@ -5,7 +5,7 @@ import jakarta.validation.ConstraintValidatorContext;
 
 /**
  * <p>
- *    Validates the name of the user.
+ *     Examines the constraints and validates the username.
  * </p>
  *
  * @author Venkatesh N
@@ -15,19 +15,19 @@ public class NameValidation implements ConstraintValidator<PersonName, String> {
 
     /**
      * <p>
-     *    Validates the username.
+     *    Validates the username and checks whether it matches the pattern.
      * </p>
-     * <p>A name is considered valid when the following constraints are satisfied:</p>
+     * <p>When each of the following conditions is met, a username is deemed to be legitimate:</p>
      * <li>1.Initial of the name should be in the uppercase (A-Z) english letters.</li>
      * <li>2.Uppercase (A-Z) and lowercase (a-z) english letters</li>
      * <li>3.Name can contain white space characters</li>
      * <li>4.Name can contain special character like(_)</li>
      * <li>5.Name should contain three to forty characters.</li>
-     * <p>Example: S Thanga_lakshmi</p>
+     * <p>Example: Twozo_technologies</p>
      *
      * @param personName validates the name of the user
      * @param context    context in which the constraint is evaluated
-     * @return true when the username matches the pattern
+     * @return true when username matches the pattern
      */
     @Override
     public boolean isValid(final String personName, final ConstraintValidatorContext context) {

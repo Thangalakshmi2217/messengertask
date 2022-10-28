@@ -2,7 +2,7 @@ package com.messenger.exception;
 
 /**
  * <p>
- *     Exception occurs, when we create our own exception.
+ *     Custom exception extends runtime exception which is utilized to construct our required exception.
  * </p>
  *
  * @author Venkatesh N

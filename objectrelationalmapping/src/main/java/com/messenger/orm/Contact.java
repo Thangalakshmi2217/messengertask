@@ -2,7 +2,7 @@ package com.messenger.orm;
 
 /**
  * <p>
- *     An {@link Enum} that contains the column names of the {@link Contact} table.
+ *     An {@link Enum} which contains column names of {@link Contact} table.
  * </p>
  */
 public enum Contact {

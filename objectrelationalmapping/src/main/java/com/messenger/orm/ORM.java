@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     An interface which provides {@link ORM} services.
+ *     provides {@link ORM} services.
  * </p>
  *
  * @author Venkatesh N
@@ -16,24 +16,24 @@ public interface ORM {
 
     /**
      * <p>
-     *     Checks whether the details are inserted.
+     *     Checks whether the details are generated.
      * </p>
      *
-     * @param tableName    represents the name of the table
+     * @param tableName    represents the table name
      * @param objectValues represents the column names and its value
-     * @return true when the UserDetails is inserted
+     * @return true when detail is generated
      */
     Boolean insert(final Enum<TableName> tableName, final Map<String, Object> objectValues);
 
     /**
      * <p>
-     *     Gets the particular details.
+     *     Retrieves the particular details.
      * </p>
      *
-     * @param tableName       represents the name of the table
-     * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the {@link Collection} of details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the particular user contact
      */
     Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                              final List<String> columnList,
@@ -41,36 +41,36 @@ public interface ORM {
 
     /**
      * <p>
-     *     Gets all the details.
+     *     Fetches all the details.
      * </p>
      *
-     * @param tableName  represents the name of the table
+     * @param tableName  represents the table name
      * @param columnList {@link List} of columns
-     * @return the {@link Collection} of details
+     * @return the {@link Collection} which contains all the details
      */
     Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName, final List<String> columnList);
 
     /**
      * <p>
-     *     Checks whether the Details are updated.
+     *     Checks whether details are updated.
      * </p>
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectValues    represents the column names and its value
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return true when the user details is updated
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return true when user detail is updated
      */
     Boolean update(final Enum<TableName> tableName, final Map<String, Object> objectValues,
                    final Map<String, Object> conditionColumn);
 
     /**
      * <p>
-     *    Checks whether the Details are removed.
+     *    Checks whether details are deleted.
      * </p>
      *
-     * @param tableName    represents the name of the table
+     * @param tableName    represents the table name
      * @param objectValues represents the column names and it's value
-     * @return true when the user details is removed
+     * @return true when detail is deleted
      */
     Boolean delete(final Enum<TableName> tableName, final Map<String, Object> objectValues);
 }

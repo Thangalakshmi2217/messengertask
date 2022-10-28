@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database and executes the CRUD operation.
+ *     Establishes the {@link Connection} to the database.
  * </p>
  *
  * @author Venkatesh N
@@ -22,13 +22,13 @@ public class ContactDAO {
 
     /**
      * <p>
-     *     Gets the specific user contact.
+     *     Retrieves the user contact.
      * </p>
      *
-     * @param tableName        represents name of the table
-     * @param columnList       represents the {@link List} of columns
-     * @param conditionColumn  gets the value by giving a certain condition
-     * @return the {@link Collection} of user contacts
+     * @param tableName        represents the table name
+     * @param columnList       represents the name of table's column
+     * @param conditionColumn  retrieves the value from the field based on the specific condition 
+     * @return the user contact
      */
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
                                                           final List<String> columnList,
@@ -38,12 +38,12 @@ public class ContactDAO {
 
     /**
      * <p>
-     *     Inserted a new user contact.
+     *     Checks whether new contact has been generated.
      * </p>
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return true when the contact is inserted
+     * @return true when contact is generated
      */
     public Boolean addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return ORM_IMPL.insert(tableName, objectDetails);
@@ -51,13 +51,13 @@ public class ContactDAO {
 
     /**
      * <p>
-     *     Updated specific user's mobile number.
+     *     Checks whether the mobile number has been updated.
      * </p>
      *
-     * @param tableName       represents name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents the contact details
-     * @param conditionColumn obtaining a value from the column by stating the condition
-     * @return true when the mobile number is updated
+     * @param conditionColumn retrieves the value from the field based on the specific condition
+     * @return true when mobile number is updated
      */
     public Boolean updateMobileNumber(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                       final Map<String, Object> conditionColumn) {
@@ -66,12 +66,12 @@ public class ContactDAO {
 
     /**
      * <p>
-     *     Removed specific user contacts in the database.
+     *     Checks whether user contact has been deleted.
      * </p>
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return true when the specific user contact is deleted
+     * @return true when specific user contact is deleted
      */
     public Boolean deleteUserContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return ORM_IMPL.delete(tableName, objectDetails);

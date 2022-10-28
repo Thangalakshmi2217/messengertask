@@ -21,11 +21,11 @@ public class UserDetailValidation {
 
     /**
      * <p>
-     *    Validating the user details.
+     *     Validates the user details.
      * </p>
      *
      * @param objectDetail represents the user details
-     * @param validation   validates the groups
+     * @param validation   refers the validation group
      * @param <T>          the type of the class modeled by the Class object
      * @return when the information is correct, returns valid; or else returns the violation message
      */

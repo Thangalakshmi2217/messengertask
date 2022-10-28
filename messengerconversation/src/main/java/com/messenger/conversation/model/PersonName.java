@@ -11,7 +11,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * <p>
- *     A custom validation interface for the {@link PersonName}.
+ *     An annotation for person name validation.
  * </p>
  */
 @Target({ElementType.FIELD, ElementType.ANNOTATION_TYPE})

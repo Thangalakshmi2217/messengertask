@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Handles all the requests from the API and manages to send back the response to the user.
+ *     Controls all the contact requests and the responses.
  * </p>
  *
  * @author Venkatesh N
@@ -23,13 +23,13 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Gets the user contacts.
+     *     Retrieves the user contact.
      * </p>
      *
-     * @param tableName           represents name of the table
-     * @param columnList          represents the {@link List} of columns
-     * @param conditionColumn     gets the value by giving a certain condition
-     * @return the {@link Collection} of contact details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition
+     * @return the particular user contact 
      */
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
                                                           final List<String> columnList,
@@ -39,12 +39,12 @@ public class ConversationController {
 
     /**
      * <p>
-     *    Checks whether the new contact can be inserted.
+     *     Creates new contact.
      * </p>
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return the message new contact is inserted
+     * @return the generated status
      */
     public String addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return CONTACT_SERVICE.addNewContact(tableName, objectDetails);
@@ -52,13 +52,13 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Checks whether the mobile number were updated.
+     *     Updates mobile number.
      * </p>
      *
-     * @param tableName       represent database table's name
+     * @param tableName       represents the table name
      * @param objectDetails   represents the contact details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the message mobile number updated
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the updated status
      */
     public String updateMobileNumber(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                      final Map<String, Object> conditionColumn) {
@@ -67,12 +67,12 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Checks whether the specific user contact is removed.
+     *     Deletes the user contact.
      * </p>
      *
-     * @param tableName     represent name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return the message user contact is deleted
+     * @return the deleted status
      */
     public String deleteUserContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return CONTACT_SERVICE.deleteUserContact(tableName, objectDetails);
@@ -80,12 +80,12 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Checks whether a NewMessage is inserted
+     *     Creates a new message.
      * </p>
      *
-     * @param tableName     represents the name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the message details
-     * @return the message, a new message is inserted
+     * @return the generated status
      */
     public String addMessage(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return MESSAGE_SERVICE.addMessage(tableName, objectDetails);
@@ -93,13 +93,13 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Gets the message.
+     *     Fetches the message.
      * </p>
      *
-     * @param tableName       represent name of the table
-     * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the {@link Collection} of message
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the {@link Collection} which contains message
      */
     public Collection<Map<String, Object>> getMessage(final Enum<TableName> tableName,
                                                       final List<String> columnList,

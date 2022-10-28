@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database and executes the CRUD operation.
+ *     Establishes the {@link Connection} to the database.
  * </p>
  *
  * @author Venkatesh N
@@ -22,13 +22,13 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Gets the particular user details.
+     *     Retrieves particular details using the id.
      * </p>
      *
-     * @param tableName       represents the name of the table
-     * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the {@link Collection} of user details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the particular details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                                     final List<String> columnList,
@@ -38,12 +38,12 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Gets all the user details.
+     *     Fetches all the details.
      * </p>
      *
-     * @param tableName  represents the name of the table
-     * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of user details
+     * @param tableName  represents the table name
+     * @param columnList represents the name of table's column
+     * @return the {@link Collection} which contains all the details
      */
     public Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName,
                                                          final List<String> columnList) {
@@ -52,12 +52,12 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Inserted a new user.
+     *     Checks whether user details have been created.
      * </p>
      *
-     * @param tableName     represents the name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the user details
-     * @return true when the new user details is inserted
+     * @return true when new user details are generated
      */
     public Boolean addNewUser(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return ORM_IMPL.insert(tableName, objectDetails);
@@ -65,13 +65,13 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Updated the user password.
+     *     Checks whether the password has been updated.
      * </p>
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents user details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return true when the user password is updated
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return true when user password is updated
      */
     public Boolean updatePassword(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                   final Map<String, Object> conditionColumn) {
@@ -80,13 +80,13 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Updated the username.
+     *     Checks whether the username has been updated.
      * </p>
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents user details
-     * @param conditionColumn obtaining a value from the column by stating the condition
-     * @return true when the username is updated
+     * @param conditionColumn retrieves the value from the field based on the specific condition
+     * @return true when username is updated
      */
     public Boolean updateUserName(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                                   final Map<String, Object> conditionColumn) {
@@ -95,12 +95,12 @@ public class AuthenticationDAO {
 
     /**
      * <p>
-     *     Removed the specific user details.
+     *     Checks whether details have been deleted using the id.
      * </p>
      *
-     * @param tableName       represents the name of the table
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return true when the user details is removed
+     * @param tableName       represents the table name
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return true when user details are deleted
      */
     public Boolean deleteDetailsById(final Enum<TableName> tableName, final Map<String, Object> conditionColumn) {
         return ORM_IMPL.delete(tableName, conditionColumn);

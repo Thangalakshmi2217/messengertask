@@ -30,7 +30,7 @@ import java.util.HashMap;
 
 /**
  * <p>
- *      Gets the user information through API and executes the CRUD operation.
+ *      Gets the user information through API and authenticates the user details.
  * </p>
  *
  * @author Venkatesh N
@@ -43,11 +43,11 @@ public class AuthenticationView {
 
     /**
      * <p>
-     *     Gets the particular user details.
+     *     Retrieves particular details using the id.
      * </p>
      *
-     * @param id represents the {@link UserDetail}
-     * @return the result, which will be displayed as {@link JSONObject}
+     * @param id refers the user's id
+     * @return the {@link JSONObject} which contains the particular details
      */
     @Path("/userProfile/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -82,10 +82,10 @@ public class AuthenticationView {
 
     /**
      * <p>
-     *     Gets all the user details.
+     *     Fetches all the details.
      * </p>
      *
-     * @return the result, which will be displayed as {@link JSONObject}
+     * @return the {@link JSONObject} which contains all the details
      */
     @Path("/allUserDetails")
     @Produces(MediaType.APPLICATION_JSON)
@@ -103,11 +103,11 @@ public class AuthenticationView {
 
     /**
      * <p>
-     *     Inserts the new user details.
+     *     Creates the user details.
      * </p>
      *
      * @param userDetail represents the {@link UserDetail}
-     * @return the result, which will be displayed as {@link JSONObject}
+     * @return the {@link JSONObject} which contains the generated status
      */
     @Path("/addNewUser")
     @Produces(MediaType.APPLICATION_JSON)
@@ -140,7 +140,7 @@ public class AuthenticationView {
      * </p>
      *
      * @param userDetail represents the {@link UserDetail}
-     * @return the result, which will be displayed as {@link JSONObject}
+     * @return the {@link JSONObject} which contains the updated status
      */
     @Path("/updatePassword")
     @Produces(MediaType.APPLICATION_JSON)
@@ -175,7 +175,7 @@ public class AuthenticationView {
      * </p>
      *
      * @param userDetail represents the {@link UserDetail}
-     * @return the result, which will be displayed as {@link JSONObject}
+     * @return the {@link JSONObject} which contains the updated status
      */
     @Path("/updateUserName")
     @Produces(MediaType.APPLICATION_JSON)
@@ -206,11 +206,11 @@ public class AuthenticationView {
 
     /**
      * <p>
-     *     Removes the specific user's information.
+     *     Deletes the specific details.
      * </p>
      *
      * @param id refers the user's id
-     * @return the result, which will be displayed as {@link JSONObject}
+     * @return the {@link JSONObject} which contains the deleted status
      */
     @Path("/deleteUser/{id}")
     @Produces(MediaType.APPLICATION_JSON)

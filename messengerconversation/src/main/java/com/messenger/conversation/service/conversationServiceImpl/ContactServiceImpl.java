@@ -23,10 +23,10 @@ public class ContactServiceImpl implements ContactService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName       represents name of the table
-     * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the {@link Collection} of user contact details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the particular user contact 
      */
     @Override
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
@@ -38,9 +38,9 @@ public class ContactServiceImpl implements ContactService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return the contact insertion status
+     * @return the generated status
      */
     @Override
     public String addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
@@ -50,10 +50,10 @@ public class ContactServiceImpl implements ContactService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName       represents name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents the contact details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the mobile number updated status
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the updated status
      */
     @Override
     public String updateMobileNumber(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
@@ -65,9 +65,9 @@ public class ContactServiceImpl implements ContactService {
     /**
      * {@inheritDoc}
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return the contact deletion status
+     * @return the deleted status
      */
     @Override
     public String deleteUserContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {

@@ -9,7 +9,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * <p>
- *     A custom validation interface for the {@link Password}.
+ *     An annotation for password validation.
  * </P>
  */
 @Retention(RUNTIME)

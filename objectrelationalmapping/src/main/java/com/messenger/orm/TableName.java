@@ -2,7 +2,7 @@ package com.messenger.orm;
 
 /**
  * <p>
- *     An {@link Enum} that holds the table names.
+ *     An {@link Enum} which holds the table names.
  * </P>
  */
 public enum TableName {

@@ -8,7 +8,7 @@ import com.messenger.orm.TableName;
 
 /**
  * <p>
- *     An interface which provides {@link AuthenticationService}
+ *     Provides {@link AuthenticationService}.
  * </p>
  *
  * @author Venkatesh N
@@ -18,13 +18,13 @@ public interface AuthenticationService {
 
     /**
      * <p>
-     *     Gets the particular user details.
+     *     Retrieves particular details using the id.
      * </p>
      *
-     * @param tableName       represents the name of the table
-     * @param columnList      represents the {@link List} of columns
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the {@link Collection} of user details
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the particular details
      */
     Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                              final List<String> columnList,
@@ -32,60 +32,60 @@ public interface AuthenticationService {
 
     /**
      * <p>
-     *     Gets all the user details.
+     *     Fetches all the details.
      * </p>
      *
-     * @param tableName  represents the name of the table
-     * @param columnList represents the {@link List} of columns
-     * @return the {@link Collection} of user details
+     * @param tableName  represents the table name
+     * @param columnList represents the name of table's column
+     * @return the {@link Collection} which contains all the details
      */
     Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName, final List<String> columnList);
 
     /**
      * <p>
-     *     Checks whether new user has been inserted.
+     *     Creates the user details.
      * </p>
      *
-     * @param tableName     represents the name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents user details
-     * @return the User information inserted status
+     * @return the generated status
      */
     String addNewUser(final Enum<TableName> tableName, final Map<String, Object> objectDetails);
 
     /**
      * <p>
-     *     Checks whether the username has been updated.
+     *     Updates the username.
      * </p>
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents user details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the username updated status
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the updated status
      */
     String updateUserName(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                           final Map<String, Object> conditionColumn);
 
     /**
      * <p>
-     *     Checks whether the password has been updated.
+     *    Updates the password.
      * </p>
      *
-     * @param tableName       represents the name of the table
+     * @param tableName       represents the table name
      * @param objectDetails   represents user details
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the password updated status
+     * @param conditionColumn retrieves the value from the field based on the specific condition 
+     * @return the updated status
      */
     String updatePassword(final Enum<TableName> tableName, final Map<String, Object> objectDetails,
                           final Map<String, Object> conditionColumn);
 
     /**
      * <p>
-     *     Checks whether the particular details can be removed
+     *     Deletes details using the id.
      * </p>
      *
-     * @param tableName       represents the name of the table
-     * @param conditionColumn gets the value by giving a certain condition
-     * @return the deletion status
+     * @param tableName       represents the table name
+     * @param conditionColumn retrieves the value from the field based on the specific condition
+     * @return the deleted status
      */
     String deleteDetailsById(final Enum<TableName> tableName, final Map<String, Object> conditionColumn);
 }

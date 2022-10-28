@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database and executes the CRUD operation.
+ *     Establishes the {@link Connection} to the database.
  * </p>
  *
  * @author Venkatesh N
@@ -22,12 +22,12 @@ public class MessageDAO {
 
     /**
      * <p>
-     *     Inserted a new message.
+     *     Checks whether new message has been generated.
      * </P>
      *
-     * @param tableName     represents name of the table
+     * @param tableName     represents the table name
      * @param objectDetails represents the message details
-     * @return true when the message is inserted
+     * @return true when the message is generated
      */
     public Boolean addMessage(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return ORM_IMPL.insert(tableName, objectDetails);
@@ -35,13 +35,13 @@ public class MessageDAO {
 
     /**
      * <p>
-     *     Get the message.
+     *     Fetches the message.
      * </p>
      *
-     * @param tableName       represents name of the table
-     * @param columnList      represents the {@link List} of column
-     * @param conditionColumn obtaining a value from the column by stating the condition
-     * @return the {@link Collection} of messages
+     * @param tableName       represents the table name
+     * @param columnList      represents the name of table's column
+     * @param conditionColumn retrieves the value from the field based on the specific condition
+     * @return the {@link Collection} which contains the messages
      */
     public Collection<Map<String, Object>> getMessage(final Enum<TableName> tableName, final List<String> columnList,
                                                       final Map<String, Object> conditionColumn) {
