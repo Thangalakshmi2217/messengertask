@@ -27,7 +27,7 @@ import javax.ws.rs.core.MediaType;
 
 /**
  * <p>
- *      Gets the contact information through {@code API}.
+ *     Integrates and authorizes the contact information through <code>API</code>.
  * </p>
  *
  * @author Venkatesh N
@@ -45,8 +45,8 @@ public class ContactView {
      *
      * @param id     refers the user's id
      * @param start  refers the start value
-     * @param limit  allows you to limit the number of rows to be displayed
-     * @return {@link JSONObject} which contains the contact
+     * @param limit  represents the number of details to be displayed
+     * @return {@link JSONObject} which contains the contact details
      */
     @Path("/userContactDetails/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -111,7 +111,8 @@ public class ContactView {
      *     Creates a new contact.
      * </p>
      *
-     * @param conversationDetail represents the {@link ConversationDetail}
+     * @param conversationDetail represents the {@link ConversationDetail} which contains details relating to the
+     *                           conversation
      * @return {@link JSONObject} which contains the generated status
      */
     @Path("/addContact")
@@ -140,7 +141,8 @@ public class ContactView {
      *    Updates the mobile number.
      * </p>
      *
-     * @param conversationDetail represents the {@link ConversationDetail}
+     * @param conversationDetail represents the {@link ConversationDetail} which contains details relating to the
+     *                           conversation
      * @return the {@link JSONObject} which contains the updated status
      */
     @Path("/changeMobileNumber")

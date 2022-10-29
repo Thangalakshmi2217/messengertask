@@ -30,7 +30,7 @@ import java.util.HashMap;
 
 /**
  * <p>
- *      Gets the user information through API and authenticates the user details.
+ *      Gets the user information through <code>API</code> and authenticates the user details.
  * </p>
  *
  * @author Venkatesh N
@@ -106,7 +106,7 @@ public class AuthenticationView {
      *     Creates the user details.
      * </p>
      *
-     * @param userDetail represents the {@link UserDetail}
+     * @param userDetail represents the {@link UserDetail} which contains the details of the users
      * @return the {@link JSONObject} which contains the generated status
      */
     @Path("/addNewUser")
@@ -139,7 +139,7 @@ public class AuthenticationView {
      *     Updates the password.
      * </p>
      *
-     * @param userDetail represents the {@link UserDetail}
+     * @param userDetail represents the {@link UserDetail} which contains the details of the users
      * @return the {@link JSONObject} which contains the updated status
      */
     @Path("/updatePassword")
@@ -174,7 +174,7 @@ public class AuthenticationView {
      *     Updates the username.
      * </p>
      *
-     * @param userDetail represents the {@link UserDetail}
+     * @param userDetail represents the {@link UserDetail} which contains the details of the users
      * @return the {@link JSONObject} which contains the updated status
      */
     @Path("/updateUserName")

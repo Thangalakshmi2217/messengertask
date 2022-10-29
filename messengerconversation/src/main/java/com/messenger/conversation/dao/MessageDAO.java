@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database.
+ *     Links up the connection and manipulates the message details into the database.
  * </p>
  *
  * @author Venkatesh N

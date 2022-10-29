@@ -11,8 +11,12 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * <p>
- *     An annotation for person name validation.
+ *     An annotation to validate the person name.
  * </p>
+ *
+ * @author Venkatesh N
+ * @version 1.0
+ * @see java.lang.annotation.Annotation
  */
 @Target({ElementType.FIELD, ElementType.ANNOTATION_TYPE})
 @Retention(RUNTIME)

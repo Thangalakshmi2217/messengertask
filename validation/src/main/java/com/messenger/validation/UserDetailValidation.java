@@ -26,7 +26,7 @@ public class UserDetailValidation {
      *
      * @param objectDetail represents the user details
      * @param validation   refers the validation group
-     * @param <T>          the type of the class modeled by the Class object
+     * @param <T>          the type of the class modeled by the class object
      * @return when the information is correct, returns valid; or else returns the violation message
      */
     public static <T> String validateDetails(final Object objectDetail, final Class<T> validation) {

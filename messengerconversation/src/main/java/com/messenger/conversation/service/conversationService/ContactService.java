@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Provides {@link ContactService}.
+ *     Provides the contact service.
  * </p>
  *
  * @author Venkatesh N
@@ -18,13 +18,13 @@ public interface ContactService {
 
     /**
      * <p>
-     *     Retrieves the user contact.
+     *     Retrieves the particular user contact.
      * </p>
      *
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition
-     * @return the particular user contact
+     * @return the {@link Collection} which contains the particular user contact
      */
     Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
                                                    final List<String> columnList,
@@ -32,7 +32,7 @@ public interface ContactService {
 
     /**
      * <p>
-     *     Creates new contact.
+     *     Creates a new contact.
      * </p>
      *
      * @param tableName     represents the table name
@@ -57,6 +57,7 @@ public interface ContactService {
     /**
      * <p>
      *     Deletes the user contact.
+     * </p>
      *
      * @param tableName     represents the table name
      * @param objectDetails represents the contact details

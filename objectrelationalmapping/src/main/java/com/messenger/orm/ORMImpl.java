@@ -14,7 +14,7 @@ import java.util.StringJoiner;
 
 /**
  * <p>
- *     Implements the {@link ORM} services.
+ *     Executes the orm related services.
  * </p>
  *
  * @author Venkatesh N
@@ -32,7 +32,7 @@ public class ORMImpl implements ORM {
      *    Gets the ORM instance.
      * </p>
      *
-     * @return {@link ORMImpl}
+     * @return the instance of {@link ORMImpl}
      */
     public static ORMImpl getInstance() {
 
@@ -47,7 +47,7 @@ public class ORMImpl implements ORM {
      *
      * @param tableName    represents the table name
      * @param objectValues represents the column names and it's value
-     * @return true when detail is generated
+     * @return true when details are generated
      */
     public Boolean insert(final Enum<TableName> tableName, final Map<String, Object> objectValues) {
         final StringJoiner column = new StringJoiner(",");
@@ -79,7 +79,7 @@ public class ORMImpl implements ORM {
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition 
-     * @return the particular detail
+     * @return the {@link Collection} which contains the particular detail
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                                     final List<String> columnList,

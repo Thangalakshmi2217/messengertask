@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Controls all the contact requests and the responses.
+ *     Directs all contact requests and responses.
  * </p>
  *
  * @author Venkatesh N
@@ -23,13 +23,13 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Retrieves the user contact.
+     *     Retrieves the particular user contact.
      * </p>
      *
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition
-     * @return the particular user contact 
+     * @return the {@link  Collection} which contains particular user contact
      */
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
                                                           final List<String> columnList,
@@ -39,7 +39,7 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Creates new contact.
+     *     Creates a new contact.
      * </p>
      *
      * @param tableName     represents the table name
@@ -52,7 +52,7 @@ public class ConversationController {
 
     /**
      * <p>
-     *     Updates mobile number.
+     *     Updates an existing mobile number.
      * </p>
      *
      * @param tableName       represents the table name

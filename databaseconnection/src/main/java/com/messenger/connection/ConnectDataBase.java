@@ -9,7 +9,7 @@ import com.messenger.exception.ConnectionNotFoundException;
 
 /**
  * <p>
- *     Provides the connection to the database.
+ *     Establishes the connection to the database.
  * </p>
  *
  * @author Venkatesh N
@@ -26,7 +26,7 @@ public class ConnectDataBase {
      *     Gets the instance of connection.
      * </p>
      *
-     * @return {@link ConnectDataBase}
+     * @return the instance of {@link ConnectDataBase}
      */
     public static ConnectDataBase getInstance() {
 
@@ -44,7 +44,7 @@ public class ConnectDataBase {
      * </p>
      *
      * @return the {@link Connection}.
-     * @exception ConnectionNotFoundException will be thrown, when it is not connected to the database
+     * @throws ConnectionNotFoundException when it is not connected to the database
      */
     public Connection getConnection() {
         try (InputStream inputStream = this.getClass().getClassLoader()

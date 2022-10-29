@@ -21,13 +21,13 @@ public class AuthenticationController {
 
     /**
      * <p>
-     *     Retrieves particular details using the id.
+     *     Retrieves the particular details using the id.
      * </p>
      *
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition
-     * @return the particular details
+     * @return the {@link Collection} which contains particular details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                                     final List<String> columnList,
@@ -64,7 +64,7 @@ public class AuthenticationController {
 
     /**
      * <p>
-     *     Updates the password.
+     *     Updates an existing password.
      * </p>
      *
      * @param tableName       represents the table name
@@ -79,7 +79,7 @@ public class AuthenticationController {
 
     /**
      * <p>
-     *     Updates the username.
+     *     Updates an existing username.
      * </p>
      *
      * @param tableName       represents the table name

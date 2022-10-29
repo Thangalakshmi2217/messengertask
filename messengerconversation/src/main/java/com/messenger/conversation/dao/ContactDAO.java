@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database.
+ *     Links up the connection and manipulates the contact details into the database.
  * </p>
  *
  * @author Venkatesh N
@@ -22,13 +22,13 @@ public class ContactDAO {
 
     /**
      * <p>
-     *     Retrieves the user contact.
+     *     Retrieves the particular user contact.
      * </p>
      *
      * @param tableName        represents the table name
      * @param columnList       represents the name of table's column
      * @param conditionColumn  retrieves the value from the field based on the specific condition 
-     * @return the user contact
+     * @return the {@link Collection} which contains the particular user contact
      */
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,
                                                           final List<String> columnList,
@@ -38,12 +38,12 @@ public class ContactDAO {
 
     /**
      * <p>
-     *     Checks whether new contact has been generated.
+     *     Checks whether new contact has been created.
      * </p>
      *
      * @param tableName     represents the table name
      * @param objectDetails represents the contact details
-     * @return true when contact is generated
+     * @return true when new contact is generated
      */
     public Boolean addNewContact(final Enum<TableName> tableName, final Map<String, Object> objectDetails) {
         return ORM_IMPL.insert(tableName, objectDetails);

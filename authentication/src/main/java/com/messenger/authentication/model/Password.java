@@ -9,8 +9,12 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 /**
  * <p>
- *     An annotation for password validation.
+ *     An annotation to validate the password.
  * </P>
+ *
+ * @author Venkatesh N
+ * @version 1.0
+ * @see java.lang.annotation.Annotation
  */
 @Retention(RUNTIME)
 @Constraint(validatedBy = {PasswordValidation.class})

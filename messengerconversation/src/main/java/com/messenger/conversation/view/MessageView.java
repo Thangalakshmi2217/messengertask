@@ -40,7 +40,8 @@ public class MessageView extends ConversationController {
      *     Creates a new message.
      * </p>
      *
-     * @param conversationDetail represents the {@link ConversationDetail}
+     * @param conversationDetail represents the {@link ConversationDetail} which contains details relating to the
+     *                           conversation
      * @return the {@link JSONObject} which contains message status
      */
     @Path("/sendMessage")
@@ -71,7 +72,7 @@ public class MessageView extends ConversationController {
 
     /**
      * <p>
-     *     Gets the message history from the database.
+     *     Gets the message history.
      * </p>
      *
      * @param id refers the user's id

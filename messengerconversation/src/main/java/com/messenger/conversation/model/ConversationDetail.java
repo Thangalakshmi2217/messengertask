@@ -18,7 +18,7 @@ import java.sql.Timestamp;
 
 /**
  * <p>
- *     A model which represents the {@link ConversationDetail}.
+ *     A model that represents the conversation related details.
  * </p>
  *
  * @author Venkatesh N

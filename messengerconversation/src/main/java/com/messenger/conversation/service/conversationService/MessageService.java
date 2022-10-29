@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Provides {@link MessageService}.
+ *     Provides the message service.
  * </p>
  *
  * @author Venkatesh N
@@ -18,7 +18,7 @@ public interface MessageService {
 
     /**
      * <p>
-     *    Creates a message.
+     *    Creates a new message.
      * </p>
      *
      * @param tableName     represents the table name

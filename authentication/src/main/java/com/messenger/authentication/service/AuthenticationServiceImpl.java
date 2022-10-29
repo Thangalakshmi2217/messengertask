@@ -9,7 +9,7 @@ import com.messenger.orm.TableName;
 
 /**
  * <p>
- *     Implements the {@link AuthenticationService}.
+ *     Executes the authentication related services.
  * </p>
  *
  * @author Venkatesh N
@@ -25,7 +25,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      * @param tableName        represents the table name
      * @param columnList       represents the name of table's column
      * @param conditionColumn  retrieves the value from the field based on the specific condition 
-     * @return the particular details
+     * @return the {@link Collection} which contains particular details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                                     final List<String> columnList,
@@ -38,7 +38,7 @@ public class AuthenticationServiceImpl implements AuthenticationService {
      *
      * @param tableName  represents the table name
      * @param columnList represents the name of table's column
-     * @return the {@link Collection} of details
+     * @return the {@link Collection} of all details
      */
     @Override
     public Collection<Map<String, Object>> getAllDetails(final Enum<TableName> tableName,

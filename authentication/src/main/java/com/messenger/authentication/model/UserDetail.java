@@ -13,7 +13,7 @@ import jakarta.validation.constraints.Size;
 
 /**
  * <p>
- *     A model which represents the {@link UserDetail}.
+ *     A model that represents the user's details.
  * </p>
  *
  * @author Venkatesh N

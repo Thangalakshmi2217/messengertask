@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     Implements the {@link ContactService}.
+ *     Executes the contact related services.
  * </p>
  *
  * @author Venkatesh N
@@ -26,7 +26,7 @@ public class ContactServiceImpl implements ContactService {
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition 
-     * @return the particular user contact 
+     * @return the {@link Collection} which contains particular user contact
      */
     @Override
     public Collection<Map<String, Object>> getUserContact(final Enum<TableName> tableName,

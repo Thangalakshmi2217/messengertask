@@ -8,7 +8,7 @@ import com.messenger.orm.TableName;
 
 /**
  * <p>
- *     Provides {@link AuthenticationService}.
+ *     Provides the authentication service.
  * </p>
  *
  * @author Venkatesh N
@@ -24,7 +24,7 @@ public interface AuthenticationService {
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition 
-     * @return the particular details
+     * @return the {@link Collection} which contains particular details
      */
     Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                              final List<String> columnList,
@@ -43,7 +43,7 @@ public interface AuthenticationService {
 
     /**
      * <p>
-     *     Creates the user details.
+     *     Creates new user details.
      * </p>
      *
      * @param tableName     represents the table name
@@ -54,7 +54,7 @@ public interface AuthenticationService {
 
     /**
      * <p>
-     *     Updates the username.
+     *     Updates an existing username.
      * </p>
      *
      * @param tableName       represents the table name
@@ -67,7 +67,7 @@ public interface AuthenticationService {
 
     /**
      * <p>
-     *    Updates the password.
+     *    Updates an existing password.
      * </p>
      *
      * @param tableName       represents the table name

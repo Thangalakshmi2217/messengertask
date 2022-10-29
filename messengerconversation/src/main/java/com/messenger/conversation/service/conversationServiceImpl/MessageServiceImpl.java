@@ -10,7 +10,7 @@ import java.util.Map;
 
 /**
  * <p>
- *    Implements the {@link MessageService}.
+ *     Executes the message related services.
  * </p>
  *
  * @author Venkatesh N

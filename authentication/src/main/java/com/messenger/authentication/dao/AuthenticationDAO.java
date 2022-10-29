@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * <p>
- *     Establishes the {@link Connection} to the database.
+ *     Links up the connection and manipulates the details into the database.
  * </p>
  *
  * @author Venkatesh N
@@ -28,7 +28,7 @@ public class AuthenticationDAO {
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition 
-     * @return the particular details
+     * @return the {@link Collection} which contains particular details
      */
     public Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                                     final List<String> columnList,

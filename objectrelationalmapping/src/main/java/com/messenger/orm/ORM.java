@@ -6,7 +6,7 @@ import java.util.Map;
 
 /**
  * <p>
- *     provides {@link ORM} services.
+ *     Provides the orm services.
  * </p>
  *
  * @author Venkatesh N
@@ -16,7 +16,7 @@ public interface ORM {
 
     /**
      * <p>
-     *     Checks whether the details are generated.
+     *     Checks whether the details are inserted.
      * </p>
      *
      * @param tableName    represents the table name
@@ -33,7 +33,7 @@ public interface ORM {
      * @param tableName       represents the table name
      * @param columnList      represents the name of table's column
      * @param conditionColumn retrieves the value from the field based on the specific condition 
-     * @return the particular user contact
+     * @return the {@link Collection} which contains the particular detail
      */
     Collection<Map<String, Object>> getParticularDetailsById(final Enum<TableName> tableName,
                                                              final List<String> columnList,
